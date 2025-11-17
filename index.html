@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Upright and Forward-Facing Object Poses using Category-level Canonical Representations">
+  <!-- <meta name="keywords" content="Aligning with Human Preference,Point Cloud Canonicalization;"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Upright and Forward-Facing Object Poses using Category-level Canonical Representations</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<head>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+     
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Learning Upright and Forward-Facing Object Poses using Category-level Canonical Representations</h1>
+          
+
+          <!--<div class="is-size-5 publication-authors">
+            <span class="author-block">Bing Han,</span>
+            <span class="author-block">Ruitao Pan,</span>
+            <span class="author-block">Xinyu Zhang,</span>
+            <span class="author-block">Chenxi Wang,</span>
+            <span class="author-block">Zhi Zhai,</span>
+            <span class="author-block">Zhibin Zhao*,</span>
+            <span class="author-block">Xuefeng Chen</span>
+          </div>
+
+          <div class="is-size-5 publication-affiliations">
+            <span class="affiliation-block">Xi'an Jiaotong University</span>
+          </div> 
+          -->
+          
+          <!-- 链接按钮 -->
+         <!-- <div class="publication-links">-->
+            <!-- Code Link -->
+            <!--<span class="link-block">
+              <a href="https://github.com/anon-mity/upright_code"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>-->
+            
+
+            <!-- Dataset Link -->
+            <!--<span class="link-block">
+              <a href="https://github.com/anon-mity/upright_code"
+                 class="external-link button is-normal is-rounded is-dark is-disabled"
+                 aria-disabled="true"> <!-- 推荐使用禁用状态 -->-->
+                <span class="icon"><i class="far fa-images"></i></span>
+                <span>Data</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>-->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser-image" src="./static/images/img1.jpg" alt="Nerfies teaser" height="100%">
+      <p class="content has-text-justified">
+      <strong> TL;DR: </strong> We propose a data-efficient, size-generalizable and physics-plausible method for dexterous grasp generation, which achieves State-Of-The-Art (SOTA) physical plausibility and competitive grasping performance with a relatively small number of parameters compared to previous SOTA methods..
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           Achieving dexterous grasping remains a key challenge in robotics. Recent generative approaches enable diverse grasps through large-scale data-driven training, yet they often neglect geometric priors of objects, which leads to low data efficiency and poor physical plausibility. 
+We propose GeoDexGrasp, a geometry-aware generation framework for dexterous grasping built upon object-centric geometric representations. We introduce a SIM(3)-equivariant network equipped with a self-supervised disentanglement strategy to extract interpretable and transferable geometric features, including shape, size, pose, and interaction direction.
+The overall generation process is then decomposed into two stages: first, root rotation generation conditioned on pose and interaction direction; second, hand grasp generation guided by shape and size.
+By leveraging geometric representations, GeoDexGrasp achieves SOTA physical plausibility (reducing 40\% penetration depth) across five datasets, and exhibits improved data efficiency. Additionally, GeoDexGrasp is also lightweight (using less than 20\% of the parameters of the previous SOTA method) and attains a comparable grasp success rate.  
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>Paper video. -->
+
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Method</h2>
+    <div class="hero-body">
+      <img id="teaser-image" src="./static/images/method.jpg" alt="Nerfies teaser" height="100%">
+      <p class="content has-text-justified">
+      <strong> Overall architecture. </strong>  Pipeline of GeoDexGrasp.  When the object undergoes pose, shape, or size variation, we expect the model to adapt its predictions accordingly rather than treating them as entirely new cases.  GeoDexGrasp consists of three stages.  \textbf{Stage 1:} Geometric representation learning and extraction.  A SIM(3)-equivariant network is employed for self-supervised disentangled pretraining to obtain transferable geometric representations aligned with high-level semantics.  \textbf{Stage 2:} Pose-guided rotation generation.  Rotational distributions in SO(3) space are generated conditioned on pose representations and interaction directions.  \textbf{Stage 3:} Shape-guided grasp generation.  A diffusion model conditioned on object shape and size representations generates the final grasp in Euclidean space.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Result</h2>
+    <div class="hero-body">
+      <img id="teaser-image" src="./static/images/dingxing.jpg" alt="Nerfies teaser" height="100%">
+      <p class="content has-text-justified">
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Data Efficiency</h2>
+    <div class="hero-body">
+      <img id="teaser-image" src="./static/images/data_eff.jpg" alt="Nerfies teaser" height="100%">
+      <p class="content has-text-justified">
+        
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Size Generalization</h2>
+    <div class="hero-body">
+      <img id="teaser-image" src="./static/images/shape.jpg" alt="Nerfies teaser" height="100%">
+      <p class="content has-text-justified">
+      </p>
+    </div>
+  </div>
+</section> 
+  
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage is modified based on the template provided by <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and we thank them for their contributions.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
