@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Learning Upright and Forward-Facing Object Poses using Category-level Canonical Representations">
-  <!-- <meta name="keywords" content="Aligning with Human Preference,Point Cloud Canonicalization;"> -->
+  <meta name="description" content="GeoDexGrasp: Geometry-aware Generation for Data-efficient and Physics-plausible Dexterous Grasping">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GDG</title>
+  <title>GeoDexGrasp: Geometry-aware Generation for Data-efficient and Physics-plausible Dexterous Grasping</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -21,53 +20,126 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  
-  <!-- 合并重复的head标签，将MathJax脚本移至此处 -->
   <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    .conference-badge {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: #f14668;
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+
+    .publication-title {
+      margin-bottom: 1rem !important;
+      line-height: 1.2;
+    }
+
+    .publication-authors {
+      margin-top: 1rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.8;
+    }
+
+    .author-block {
+      display: inline-block;
+      margin-right: 0.4rem;
+    }
+
+    .publication-affiliations {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .section-note {
+      margin-top: 0.75rem;
+    }
+
+    .teaser img {
+      border-radius: 8px;
+    }
+  </style>
 </head>
+
 <body>
-     
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GDG</h1>
-          
-          <!-- 作者和机构信息（保持注释状态，如需启用可移除注释） -->
-          <!--<div class="is-size-5 publication-authors">
-            <span class="author-block">Bing Han,</span>
-            <span class="author-block">Ruitao Pan,</span>
-            <span class="author-block">Xinyu Zhang,</span>
-            <span class="author-block">Chenxi Wang,</span>
-            <span class="author-block">Zhi Zhai,</span>
-            <span class="author-block">Zhibin Zhao*,</span>
-            <span class="author-block">Xuefeng Chen</span>
+
+          <h1 class="title is-1 publication-title">
+            GeoDexGrasp: Geometry-aware Generation for Data-efficient and Physics-plausible Dexterous Grasping
+          </h1>
+
+          <div class="conference-badge">CVPR 2026</div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Bing Han<sup>1,2</sup>,</span>
+            <span class="author-block">Weiyuan Liu<sup>1</sup>,</span>
+            <span class="author-block">Changlong Zhang<sup>1</sup>,</span>
+            <span class="author-block">Chenxi Wang<sup>1</sup>,</span>
+            <span class="author-block">Zhibin Zhao<sup>1</sup>,</span>
+            <span class="author-block">Zhi Zhai<sup>1</sup></span>
           </div>
+
           <div class="is-size-5 publication-affiliations">
-            <span class="affiliation-block">Xi'an Jiaotong University</span>
-          </div>-->
-          
-          <!-- 链接按钮（修复注释错误并闭合标签） -->
+            <span class="author-block"><sup>1</sup>Xi'an Jiaotong University</span>
+            &nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Galbot</span>
+          </div>
+
+          <div class="is-size-6 has-text-grey-dark" style="margin-bottom: 1.2rem;">
+            Accepted by the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026
+          </div>
+
           <div class="publication-links">
-            <!-- Code Link -->
-            <!--<span class="link-block">
-              <a href="https://github.com/anon-mity/upright_code" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code</span>
-              </a>
-            </span>-->
-            
-            <!-- Dataset Link（修复多余的注释闭合符） -->
+            <!-- Paper -->
+            <!--
             <span class="link-block">
-              <a href="https://github.com/anon-mity/upright_code" class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true">
-                <!-- 推荐使用禁用状态 -->
-                <!--<span class="icon"><i class="far fa-images"></i></span>-->
-                <!--<span>Data</span>-->
+              <a href="YOUR_PAPER_LINK"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>Paper</span>
               </a>
             </span>
-          </div> <!-- 闭合publication-links -->
+            -->
+
+            <!-- Code -->
+            <!--
+            <span class="link-block">
+              <a href="YOUR_CODE_LINK"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+            -->
+
+            <!-- Project Page -->
+            <!--
+            <span class="link-block">
+              <a href="YOUR_PROJECT_LINK"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-globe"></i>
+                </span>
+                <span>Project</span>
+              </a>
+            </span>
+            -->
+          </div>
+
         </div>
       </div>
     </div>
@@ -79,8 +151,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img id="teaser-image" src="./static/images/img1.jpg" alt="Teaser image" height="100%">
-      <p class="content has-text-justified">
-        <strong>TL;DR:</strong> We propose a data-efficient, size-generalizable and physics-plausible method for dexterous grasp generation, which achieves State-Of-The-Art (SOTA) physical plausibility and competitive grasping performance with a relatively small number of parameters compared to previous SOTA methods.
+      <p class="content has-text-justified section-note">
+        <strong>TL;DR:</strong> We propose a data-efficient, size-generalizable, and physics-plausible method for dexterous grasp generation, achieving state-of-the-art physical plausibility and competitive grasping performance with substantially fewer parameters than previous state-of-the-art methods.
       </p>
     </div>
   </div>
@@ -89,16 +161,15 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Achieving dexterous grasping remains a key challenge in robotics. Recent generative approaches enable diverse grasps through large-scale data-driven training, yet they often neglect geometric priors of objects, which leads to low data efficiency and poor physical plausibility. 
+            Achieving dexterous grasping remains a key challenge in robotics. Recent generative approaches enable diverse grasps through large-scale data-driven training, yet they often neglect geometric priors of objects, which leads to low data efficiency and poor physical plausibility.
             We propose GeoDexGrasp, a geometry-aware generation framework for dexterous grasping built upon object-centric geometric representations. We introduce a SIM(3)-equivariant network equipped with a self-supervised disentanglement strategy to extract interpretable and transferable geometric features, including shape, size, pose, and interaction direction.
             The overall generation process is then decomposed into two stages: first, root rotation generation conditioned on pose and interaction direction; second, hand grasp generation guided by shape and size.
-            By leveraging geometric representations, GeoDexGrasp achieves SOTA physical plausibility (reducing 40% penetration depth) across five datasets, and exhibits improved data efficiency. Additionally, GeoDexGrasp is also lightweight (using less than 20% of the parameters of the previous SOTA method) and attains a comparable grasp success rate.  
+            By leveraging geometric representations, GeoDexGrasp achieves state-of-the-art physical plausibility (reducing 40% penetration depth) across five datasets and exhibits improved data efficiency. Additionally, GeoDexGrasp is lightweight, using less than 20% of the parameters of the previous state-of-the-art method, while attaining a comparable grasp success rate.
           </p>
         </div>
       </div>
@@ -109,11 +180,14 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method</h2> <!-- 使用Bulma内置类替代内联样式 -->
+    <h2 class="title is-3 has-text-centered">Method</h2>
     <div class="hero-body">
-      <img id="method-image" src="./static/images/method.jpg" alt="Method architecture" height="100%"> <!-- 修复重复ID问题 -->
-      <p class="content has-text-justified">
-        <strong>Overall architecture.</strong> Pipeline of GeoDexGrasp. When the object undergoes pose, shape, or size variation, we expect the model to adapt its predictions accordingly rather than treating them as entirely new cases. GeoDexGrasp consists of three stages. <strong>Stage 1:</strong> Geometric representation learning and extraction. A SIM(3)-equivariant network is employed for self-supervised disentangled pretraining to obtain transferable geometric representations aligned with high-level semantics. <strong>Stage 2:</strong> Pose-guided rotation generation. Rotational distributions in SO(3) space are generated conditioned on pose representations and interaction directions. <strong>Stage 3:</strong> Shape-guided grasp generation. A diffusion model conditioned on object shape and size representations generates the final grasp in Euclidean space.
+      <img id="method-image" src="./static/images/method.jpg" alt="Method architecture" height="100%">
+      <p class="content has-text-justified section-note">
+        <strong>Overall architecture.</strong> Pipeline of GeoDexGrasp. When the object undergoes pose, shape, or size variation, we expect the model to adapt its predictions accordingly rather than treating them as entirely new cases. GeoDexGrasp consists of three stages.
+        <strong>Stage 1:</strong> Geometric representation learning and extraction. A SIM(3)-equivariant network is employed for self-supervised disentangled pretraining to obtain transferable geometric representations aligned with high-level semantics.
+        <strong>Stage 2:</strong> Pose-guided rotation generation. Rotational distributions in SO(3) space are generated conditioned on pose representations and interaction directions.
+        <strong>Stage 3:</strong> Shape-guided grasp generation. A diffusion model conditioned on object shape and size representations generates the final grasp in Euclidean space.
       </p>
     </div>
   </div>
@@ -122,13 +196,16 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Result</h2>
+    <h2 class="title is-3 has-text-centered">Results</h2>
+
     <div class="hero-body">
-      <img id="result-image" src="./static/images/dingliang.png" alt="Experimental results1" height="100%">
-      <p class="content has-text-justified"></p>
+      <img id="result-image-1" src="./static/images/dingliang.png" alt="Experimental results 1" height="100%">
+      <p class="content has-text-justified section-note"></p>
+    </div>
+
     <div class="hero-body">
-      <img id="result-image" src="./static/images/dingxing.jpg" alt="Experimental results" height="100%">
-      <p class="content has-text-justified"></p>
+      <img id="result-image-2" src="./static/images/dingxing.jpg" alt="Experimental results 2" height="100%">
+      <p class="content has-text-justified section-note"></p>
     </div>
   </div>
 </section>
@@ -139,7 +216,7 @@
     <h2 class="title is-3 has-text-centered">Data Efficiency</h2>
     <div class="hero-body">
       <img id="data-eff-image" src="./static/images/data_eff.jpg" alt="Data efficiency analysis" height="100%">
-      <p class="content has-text-justified"></p>
+      <p class="content has-text-justified section-note"></p>
     </div>
   </div>
 </section>
@@ -148,12 +225,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Size Generalization</h2>
+
     <div class="hero-body">
-      <img id="size-generalization-image" src="./static/images/shape.jpg" alt="Size generalization results" height="100%">
-      <p class="content has-text-justified"></p>
+      <img id="size-generalization-image-1" src="./static/images/shape.jpg" alt="Size generalization results 1" height="100%">
+      <p class="content has-text-justified section-note"></p>
+    </div>
+
     <div class="hero-body">
-      <img id="size-generalization-image" src="./static/images/shapedingliang.png" alt="Size generalization results" height="100%">
-      <p class="content has-text-justified"></p>
+      <img id="size-generalization-image-2" src="./static/images/shapedingliang.png" alt="Size generalization results 2" height="100%">
+      <p class="content has-text-justified section-note"></p>
     </div>
   </div>
 </section>
@@ -162,18 +242,26 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="" class="external-link" disabled>
+      <!--
+      <a class="icon-link external-link" href="YOUR_CODE_LINK">
         <i class="fab fa-github"></i>
       </a>
+      -->
     </div>
+
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>.
           </p>
           <p>
-            This webpage is modified based on the template provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and we thank them for their contributions.  
+            This webpage is modified based on the template provided by
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+            and we thank them for their contributions.
           </p>
         </div>
       </div>
