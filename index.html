@@ -62,6 +62,16 @@
 
     .teaser img {
       border-radius: 8px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .result-side-by-side .column img {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
@@ -150,7 +160,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser-image" src="./static/images/img1.jpg" alt="Teaser image" height="100%">
+      <img id="teaser-image" src="./static/images/img1.jpg" alt="Teaser image">
       <p class="content has-text-justified section-note">
         <strong>TL;DR:</strong> We propose a data-efficient, size-generalizable, and physics-plausible method for dexterous grasp generation, achieving state-of-the-art physical plausibility and competitive grasping performance with substantially fewer parameters than previous state-of-the-art methods.
       </p>
@@ -182,7 +192,7 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Method</h2>
     <div class="hero-body">
-      <img id="method-image" src="./static/images/method.jpg" alt="Method architecture" height="100%">
+      <img id="method-image" src="./static/images/method.jpg" alt="Method architecture">
       <p class="content has-text-justified section-note">
         <strong>Overall architecture.</strong> Pipeline of GeoDexGrasp. When the object undergoes pose, shape, or size variation, we expect the model to adapt its predictions accordingly rather than treating them as entirely new cases. GeoDexGrasp consists of three stages.
         <strong>Stage 1:</strong> Geometric representation learning and extraction. A SIM(3)-equivariant network is employed for self-supervised disentangled pretraining to obtain transferable geometric representations aligned with high-level semantics.
@@ -199,12 +209,12 @@
     <h2 class="title is-3 has-text-centered">Results</h2>
 
     <div class="hero-body">
-      <img id="result-image-1" src="./static/images/dingliang.png" alt="Experimental results 1" height="100%">
+      <img id="result-image-1" src="./static/images/dingliang.png" alt="Experimental results 1">
       <p class="content has-text-justified section-note"></p>
     </div>
 
     <div class="hero-body">
-      <img id="result-image-2" src="./static/images/dingxing.jpg" alt="Experimental results 2" height="100%">
+      <img id="result-image-2" src="./static/images/dingxing.jpg" alt="Experimental results 2">
       <p class="content has-text-justified section-note"></p>
     </div>
   </div>
@@ -215,7 +225,7 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Data Efficiency</h2>
     <div class="hero-body">
-      <img id="data-eff-image" src="./static/images/data_eff.jpg" alt="Data efficiency analysis" height="100%">
+      <img id="data-eff-image" src="./static/images/data_eff.jpg" alt="Data efficiency analysis">
       <p class="content has-text-justified section-note"></p>
     </div>
   </div>
@@ -227,13 +237,37 @@
     <h2 class="title is-3 has-text-centered">Size Generalization</h2>
 
     <div class="hero-body">
-      <img id="size-generalization-image-1" src="./static/images/shape.jpg" alt="Size generalization results 1" height="100%">
+      <img id="size-generalization-image-1" src="./static/images/shape.jpg" alt="Size generalization results 1">
       <p class="content has-text-justified section-note"></p>
     </div>
 
     <div class="hero-body">
-      <img id="size-generalization-image-2" src="./static/images/shapedingliang.png" alt="Size generalization results 2" height="100%">
+      <img id="size-generalization-image-2" src="./static/images/size_gene.jpg" alt="Size generalization results 2">
       <p class="content has-text-justified section-note"></p>
+    </div>
+
+    <div class="hero-body">
+      <img id="size-generalization-image-3" src="./static/images/shape1.png" alt="Size generalization results 3">
+      <p class="content has-text-justified section-note"></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Sim &amp; Real Experiment</h2>
+    <div class="hero-body">
+      <div class="columns is-centered is-variable is-4 result-side-by-side">
+        <div class="column is-half">
+          <img id="sim-experiment-image" src="./static/images/result.png" alt="Simulation experiment result">
+          <p class="content has-text-centered section-note"></p>
+        </div>
+        <div class="column is-half">
+          <img id="real-experiment-image" src="./static/images/realworld_new.jpg" alt="Real-world experiment result">
+          <p class="content has-text-centered section-note"></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
